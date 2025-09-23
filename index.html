@@ -6,7 +6,18 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <meta name="keywords" content="">
-<title></title>
+<title>zjjspt.com</title>
+<style>
+    footer {
+        text-align: center; /* 文字居中 */
+        padding: 15px 0; /* 上下内边距 */
+        background-color: #f1f1f1; /* 浅灰色背景 */
+        color: #333; /* 文字颜色 */
+        font-size: 14px; /* 字体大小 */
+        border-top: 1px solid #e1e1e1; /* 顶部边框线 */
+        margin-top: 50px; /* 与主体内容的距离 */
+    }
+</style>
 <!-- Favicon Icon -->
 <link rel="shortcut icon" href="img/svxp.ico" type="image/x-icon">
 <!-- Bootstrap -->
@@ -33,6 +44,13 @@
 	<div class="text-center">ZJJSPT.COM</div>
 	<div class="text-center">Email:Service@svxp.com</div>
 	<!-- End content -->
+
+	<footer> <!-- 使用footer标签定义页脚 -->
+        <p>&copy; 2015-<span id="currentYear"></span><a target="_blank" href="https://svxp.com">SVXP.com&nbsp;</a> All rights reserved.</p> 
+        <!-- 使用 &copy; 来显示版权符号 © -->
+        <!-- 使用 span 和 id 以便用 JavaScript 动态更新当前年份 -->
+    </footer>
+	
 	<footer>
 		<div class="footer">
 			<div class="container">
@@ -56,7 +74,7 @@
 					<!-- End socials -->
 					<!-- End footer-menu -->
 					<p class="copy">
-						Copyright &copy; 2022.SVXP.com&nbsp; All rights reserved.<a target="_blank" href="https://svxp.com">&nbsp;</a>
+						Copyright &copy; 2004.SVXP.com&nbsp; All rights reserved.<a target="_blank" href="https://svxp.com">&nbsp;</a>
 					</p>
 				</div>
 			</div>
@@ -70,8 +88,18 @@
 <!-- Custom -->
 <script src="js/main.js"></script>
 <script src="js/script.js"></script>
+	<script>
+    // 当页面加载完成后执行
+    document.addEventListener("DOMContentLoaded", function() {
+        // 获取带有 id "currentYear" 的元素
+        const yearSpan = document.getElementById("current-year");
+        // 将元素的内容设置为当前年份
+        yearSpan.textContent = new Date().getFullYear();
+    });
+</script>
 </body>
 </html>
+
 
 
 
